@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.longtype-container {
+  width: 100px;
+  margin: 0;
+  background: grey;
+}
+
+.longtype-container .longtype-content {
+  font-family: "メイリオ";
+  font-size: 50px;
+  line-height: 50px;
+  text-align: left;
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  width: 200%;
+}
+/*# sourceMappingURL=sample.css.map */

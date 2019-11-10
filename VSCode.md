@@ -14,4 +14,4 @@
 | タブフォーカスの移動                       | command + option + ←→       |
 | 矩形選択                                   | shift + option + 範囲選択   |
 | タブのグループ分け                         | command + control + ←→      |
-|                                            |                             |
+| コメントアウト                             | command + /                 |
