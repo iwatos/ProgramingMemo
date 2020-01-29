@@ -1,18 +1,18 @@
-import java.util.Date;
+import java.util.*;
 
 //プログラムのコンパイル　javac Sample.java
 //プログラムの実行　java Sample
-public class Main {
+class Main {
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
 }
 
 //文法
-public class Grammer {
-    
+class Grammer {
+
     //データ型
-    dataType() {
+    void dataType() {
         // int(整数)型
         int num = 1;
 
@@ -35,46 +35,46 @@ public class Grammer {
         Date d = new Date();
 
         // 配列型
-        int[] intArray = { 0, 1, 2, 3, 4 };
+        int[] intArray = {0, 1, 2, 3, 4};
         double[] doubleArray = new double[10];
         String[] stringArray = {"Sunday", "Monday", "Tuesday"};
 
         //final変数　あとで代入できない
-        final int FNUM = 0; 
+        final int FNUM = 0;
         //FNUM = 1;
     }
 
-    Syntax(){
+    void Syntax() {
         //for
-        for(int i = 0; i <= 5;i++) {
+        for (int i = 0; i <= 5; i++) {
 
         }
 
         //if
-        if(true){
+        if (true) {
 
-        } else if(true){
+        } else if (true) {
 
         } else {
 
         }
 
         //while
-        while(true) {
+        while (true) {
 
         }
 
         //do-while
         do {
 
-        } while(true)
+        } while (true);
 
         //三項演算子
-        1 >= 100 ? true : false;
+        print(1 >= 100 ? true : false);
 
         //switch
         int a = 1;
-        switch(a) {
+        switch (a) {
             case 0:
                 break;
             case 1:
@@ -87,22 +87,23 @@ public class Grammer {
 
         //break
         sample:
-        for(int i = 0; i <= 5;i++) {
-            if(true){
+        for (int i = 0; i <= 5; i++) {
+            if (true) {
                 break sample;//forループ中止
             }
         }
 
         //continue
-        for(int i = 0; i <= 5;i++) {
-            if(true){
+        for (int i = 0; i <= 5; i++) {
+            if (true) {
                 break;//後の処理をスキップして次のループへ
             }
         }
 
 
     }
-    collectionFramework() {
+
+    void collectionFramework() {
         //リスト
         List<integer> list = new ArrayList();
         list.add(1);//追加
@@ -116,40 +117,40 @@ public class Grammer {
 
         //map
         Map<String, Integer> map = new HashMap<String, Integer>();
-        map.put("一番",0);//追加
-        map.put("一番",1);//追加 同じキーは上書き
-        map.put("二番",2);
+        map.put("一番", 0);//追加
+        map.put("一番", 1);//追加 同じキーは上書き
+        map.put("二番", 2);
         map.get("一番");//1
 
         //拡張for
-        for(int num : list){
+        for (int num : list) {
             System.out.println(num);
         }
         list.foreach(System.out::println);
     }
 
-    method() {
+    void method() {
         // 結合
         String join = "aaa" + "bbb";
 
         // 分割
-        String[] record = "aaa,bbb,ccc".split( "," );
+        String[] record = "aaa,bbb,ccc".split(",");
 
         // 長さ
         int length = "abcdef".length();
 
         // 切り出し
-        "abcd".substring( 0, 2 );   // abc
+        "abcd".substring(0, 2);   // abc
 
         // 検索
-        int result = "abcd".indexOf( "cd" ); // 見つかった場合はその位置、見つからなかった場合は-1が返る
+        int result = "abcd".indexOf("cd"); // 見つかった場合はその位置、見つからなかった場合は-1が返る
     }
 }
 
 //class
 //final:サブクラス作成不可
 //abstract:インスタンス生成不可
-public class Sample {
+class Sample {
     //メンバ変数
     int a;
     private int b;
@@ -162,43 +163,45 @@ public class Sample {
     }
 
     //クラスメソッド
-    hello() {
-        System.println("HelloWorld!");
+    void hello() {
+        System.out.println("HelloWorld!");
         this.a = 0;//自分自身を指す
     }
 }
 
-public class ExtendedSample　extends Sample {
+class ExtendedSample extends Sample {
     //オーバーライド
-    hello() {
+    void hello() {
         super.hello();//継承元のhello()を実行;
-        System.println("HelloWorldExtended!");
+       System.out.println("HelloWorldExtended!");
     }
 
     //オーバーロード
-    hello(int num) {
-        System.println("HelloWorldExtended!" + num);
+    void hello(int num) {
+       System.out.println("HelloWorldExtended!" + num);
     }
-} 
+}
 
 //インターフェース
-interface Greeting{
+interface Greeting {
     void greet();//インタフェース内ではヘッダー定義のみ
 }
 
-public class ExInterface implements Greeting {
+class ExInterface implements Greeting {
     public void greet() {
-        System.out.println("こんにちは")
+        System.out.println("こんにちは");
     }
 }
 
 //例外
-void tryCatch throws Exception() {
-    try {
-        throw new Exception();
-    } catch(Exception e){
-        System.err.println(e.getMessage());
-    } finally {
+class ExeptionSample implements Greeting {
+    public void tryCatch() throws Exception {
+        try {
+            throw new Exception();
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        } finally {
 
+        }
     }
 }
